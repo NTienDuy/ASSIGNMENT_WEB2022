@@ -14,7 +14,22 @@
         <!-- Start menu -->
         <div>
             <header class="max-w-[860px] m-auto flex justify-between flex-col ">
-                <ul class="flex justify-end ">
+                <button id="button" class="md:hidden flex justify-end">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="44"
+                      height="44"
+                      fill="currentColor"
+                      class="bi bi-justify"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+                      />
+                    </svg>
+                  </button>
+                  <ul id="menu" class="md:flex justify-end md:space-x-4 hidden">
                     <li>
                         <a href=" " class="block p-4 text-xl text-black font-bold hover:text-red-600">Works</a>
                     </li>
@@ -106,5 +121,12 @@
         <!-- End footer -->
     </div>
 </body>
+<script>
+    const menu = document.getElementById("menu");
+    const button = document.getElementById("button");
 
+    button.addEventListener("click", function () {
+      menu.classList.toggle("hidden");
+    });
+  </script>
 </html>

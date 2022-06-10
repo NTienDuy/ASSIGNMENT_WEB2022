@@ -8,14 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Home</title>
 </head>
-<script>
-    const menu = document.getElementById("menu");
-    const button = document.getElementById("button");
 
-    button.addEventListener("click", function () {
-      menu.classList.toggle("hidden");
-    });
-  </script>
 <body>
     <div class="container max-w-[1200px] mx-auto">
         <!-- Start menu -->
@@ -54,7 +47,7 @@
         <div class="">
             <div class="mt-[60px] md:mt-[162px] mb-[50px] max-w-[900px] m-auto">
                 <div class="flex grid p-5 md:grid-cols-3 gap-8">
-                    <div class="md:col-span-2 order-2 md:order-1">
+                    <div class="md:col-span-2 order-2 md:order-1 text-center md:text-left">
                         <h3
                             class="font-bold text-[44px] leading-[60px] text-center md:text-left text-[#21243D] mb-10 max-w-[310px] md:max-w-none m-auto">
                             Hi, I am John,<br />Creative Technologist
@@ -64,10 +57,10 @@
                             amet sint. Velit officia consequat duis enim velit mollit.
                             Exercitation veniam consequat sunt nostrud amet.
                         </p>
-                        <button
-                            class="min-w-[208px] min-h-[47px]  bg-red-400 text-white text-xl hover:bg-cyan-300 hover:text-black md:inline">
+                            <button
+                            class="min-w-[208px] min-h-[47px] bg-red-400 text-white text-xl hover:bg-cyan-300 hover:text-black md:inline">
                             Download Resume
-                        </button>
+                        </button>              
                     </div>
                     <div class="md:col-span-1 m-auto order-1 md:order-2 translate-x-[0px] md:translate-x-[-13px]">
                         <img src="./src/img/Ellipse 1.jpg " class="min-w-[243px] min-h-[243px] mx-auto md:ml-auto " alt=" " />
@@ -204,4 +197,12 @@
         <!-- End footer -->
     </div>
 </body>
+<script>
+    const menu = document.getElementById("menu");
+    const button = document.getElementById("button");
+
+    button.addEventListener("click", function () {
+      menu.classList.toggle("hidden");
+    });
+  </script>
 </html>
