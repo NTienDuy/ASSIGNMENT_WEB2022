@@ -8,12 +8,35 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Home</title>
 </head>
+<script>
+    const menu = document.getElementById("menu");
+    const button = document.getElementById("button");
+
+    button.addEventListener("click", function () {
+      menu.classList.toggle("hidden");
+    });
+  </script>
 <body>
     <div class="container max-w-[1200px] mx-auto">
         <!-- Start menu -->
         <div>
             <header class="max-w-[900px] m-auto flex justify-between flex-col">
-                <ul class="flex justify-end">
+                <button id="button" class="md:hidden flex justify-end">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="44"
+                      height="44"
+                      fill="currentColor"
+                      class="bi bi-justify"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+                      />
+                    </svg>
+                  </button>
+                <ul id="menu" class="md:flex justify-end md:space-x-4 hidden">
                     <li>
                         <a href=" " class="block p-4 text-xl text-black font-bold hover:text-red-600">Works</a>
                     </li>
@@ -42,7 +65,7 @@
                             Exercitation veniam consequat sunt nostrud amet.
                         </p>
                         <button
-                            class="min-w-[208px] min-h-[47px] bg-red-400 text-white text-xl hover:bg-cyan-300 hover:text-black md:inline">
+                            class="min-w-[208px] min-h-[47px]  bg-red-400 text-white text-xl hover:bg-cyan-300 hover:text-black md:inline">
                             Download Resume
                         </button>
                     </div>
@@ -55,9 +78,9 @@
         <!-- End details -->
         <!-- Start blogs -->
         <div class="bg-[#EDF7FA] m-auto">
-            <div class="max-w-[900px] py-[26px] m-auto  mx-auto">
+            <div class="max-w-[900px] py-[26px] m-auto mx-[15px] lg:mx-auto">
                 <div class="flex justify-between pb-[26px]">
-                    <span class=" text-[22px] text-left w-full md:w-auto">Recent posts</span>
+                    <span class=" text-[22px] text-center md:text-left w-full md:w-auto">Recent posts</span>
                         <a href=""  class="text-[#3498db]  text-[16px] underline hover:underline hover:cursor-pointer hover:underline-offset-4 hidden block">View all</a>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -101,14 +124,14 @@
         <div class="mx-[15px] md:mx-[0]">
             <div class="max-w-[900px] m-auto pb-24">
                 <div class="py-[26px]">
-                    <p class="text-xl pl-1 text-left">Featured works</p>
+                    <p class="text-xl pl-1 text-center md:text-left">Featured works</p>
                 </div>
                 <div class="">
                     <!-- Start work 1 -->
-                    <div class="border-b-2 py-4 mb-[25px] flex flex-row">
+                    <div class="border-b-2 py-4 mb-[25px] flex flex-col md:flex-row">
                         <img src="./src/img/Rectangle 30.jpg " alt="" class="" />
                         <div class="pl-5">
-                            <h3 class="font-bold text-[30px] ">
+                            <h3 class="font-bold text-[30px] pt-[12px] md:pt-0">
                                 Designing Dashboards
                             </h3>
                             <div class="py-[22px]">
@@ -124,15 +147,15 @@
                     </div>
                     <!-- End work 1 -->
                     <!-- Start work 2 -->
-                    <div class="border-b-2 py-4 mb-[25px] flex flex-row">
+                    <div class="border-b-2 py-4 mb-[25px] flex flex-col md:flex-row">
                         <img src="./src/img/Rectangle 32.jpg " alt="" class="" />
-                        <div class="md:pl-5">
-                            <h3 class="font-bold text-[30px] ">
-                                Vibrant Portraits of 2020
+                        <div class="pl-5">
+                            <h3 class="font-bold text-[30px] pt-[12px] md:pt-0">
+                                Designing Dashboards
                             </h3>
                             <div class="py-[22px]">
-                                <span class="font-bold inline bg-[#142850] text-white px-2 rounded-[15px]">2018</span>
-                                <div class="inline mx-4 text-gray-400">Illustration</div>
+                                <span class="font-bold inline bg-[#142850] text-white px-2 rounded-[15px]">2020</span>
+                                <div class="inline mx-4 text-gray-400">Dashboard</div>
                             </div>
                             <p class="">
                                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -143,15 +166,15 @@
                     </div>
                     <!-- End work 2 -->
                     <!-- Start work 3 -->
-                    <div class="border-b-2 py-4 mb-[25px] flex flex-row">
+                    <div class="border-b-2 py-4 mb-[25px] flex flex-col md:flex-row">
                         <img src="./src/img/Rectangle 34.jpg " alt="" class="" />
-                        <div class="md:pl-5">
-                            <h3 class="font-bold text-[30px] ">
-                                36 Days of Malayalam type
+                        <div class="pl-5">
+                            <h3 class="font-bold text-[30px] pt-[12px] md:pt-0">
+                                Designing Dashboards
                             </h3>
                             <div class="py-[22px]">
-                                <span class="font-bold inline bg-[#142850] text-white px-2 rounded-[15px]">2018</span>
-                                <div class="inline mx-4 text-gray-400">Typography</div>
+                                <span class="font-bold inline bg-[#142850] text-white px-2 rounded-[15px]">2020</span>
+                                <div class="inline mx-4 text-gray-400">Dashboard</div>
                             </div>
                             <p class="">
                                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -160,10 +183,11 @@
                             </p>
                         </div>
                     </div>
+                    <!-- End work 3 -->
                 </div>
             </div>
         </div>
-        <!-- End work 3 -->
+        
         <!-- End work -->
         <!-- Start footer -->
         <div>
